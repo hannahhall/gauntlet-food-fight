@@ -1,0 +1,118 @@
+body {
+  font-family: 'VT323', "Helvetica", "sans-serif";
+  margin: 0;
+  padding: .5em;
+  font-size: 2em;
+  background-color: rgb(233, 233, 233);
+}
+img {
+  margin: auto;
+  max-height: 300px;
+}
+
+/*Char and weapon page*/
+
+#choosey,
+#weapons {
+  margin: 5%;
+  border: 10px solid #b22222;
+  box-shadow: 1px 1px 20px rgb(94, 17, 17);
+  border-radius: 1em;
+}
+
+#name {
+  width: 25%;
+  border-color: #b22222;
+  font-size: 1.2em;
+  display: inline;
+  color: black;
+}
+
+#name:focus {
+  box-shadow: 0 0 5px #CC5500;
+  border: 1px solid #CC5500;
+}
+.choose {
+  text-align: center;
+  margin: 1em auto;
+  font-size: 1.2em;
+}
+
+.heroBtn,
+.weaponBtn {
+  margin-left: 20px !important;
+}
+
+/*Fight page*/
+
+.fightScreen {
+  margin: 5%;
+}
+
+#fight {
+  border: 10px solid #b22222;
+  box-shadow: 0 0 10px rgb(94, 17, 17);
+  border-radius: 1em;
+}
+#attackBtn {
+  text-align: center;
+}
+
+#heroInfo,
+#enemyInfo {
+  color: blue;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#currentEnemyHealth,
+#currentHeroHealth {
+  color: green;
+  font-size: 1.5em;
+  text-align: center;
+}
+#heroimg {
+  margin: auto;
+}
+#battleLog,
+#bonusLog {
+  margin: 5% 0;
+  text-align: justify;
+}
+.insertText {
+  color: #CC5500;
+}
+
+.bonus {
+  color: #CC5500;
+}
+
+/*Modal styling*/
+.modalDiv {
+  text-align: center;
+  border: 10px solid #b22222;
+  box-shadow: 1px 1px 20px rgb(94, 17, 17);
+  border-radius: 1em;
+}
+.modal-lg {
+  margin: 5% auto;
+}
+
+/*  Button styles*/
+
+.btn {
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding: 10px 5px;
+  width: 50%;
+}
+
+.btn:focus {
+  outline: 0;
+}
+

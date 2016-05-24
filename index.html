@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Food Fight!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="styles/gauntlet.css">
+</head>
+<body>
+  <!-- Modal  -->
+  <div id = "modalDiv" class="modal fade" hidden>
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content modalDiv">
+        <!-- results/end of game announcement goes here. -->
+        <div id="results">
+        </div>
+        <button id="resetButton" class= "btn btn-lg btn-warning">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="choosey" class= "container-fluid">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 choose">
+        <img src="pics/foodFightTitle.png" alt="FoodFight" class="img-responsive">
+      </div>
+      <div class="col-md-12 col-sm-12 choose">
+        <img src="pics/chooseChar.png" alt="Choose your character" class="img-responsive">
+      </div>
+      <div class="col-md-12 col-sm-12 choose">
+        <label for="name">What is your name?</label>
+        <input type="text" id="name" class="form-control" autofocus>
+      </div>
+      <div class="col-md-12 col-sm-12 radioBtn choose">
+        <!-- options for character will go here -->
+        <input type="radio" name="heroChoice" class="heroBtn" value="Tomato"> Tomato
+        <input type="radio" name="heroChoice" class="heroBtn" value="Potato"> Potato
+        <input type="radio" name="heroChoice" class="heroBtn" value="Cow"> Cow
+        <input type="radio" name="heroChoice" class="heroBtn" value="Lobster"> Lobster
+        <input type="radio" name="heroChoice" class="heroBtn" value="Apple"> Apple
+        <input type="radio" name="heroChoice" class="heroBtn" value="Peach"> Peach
+      </div>
+      <div class="col-md-12 col-sm-12 choose">
+        <button id="characterChosen" class = "btn btn-md btn-success">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weapons Page -->
+  <section id="weapons" class= "container-fluid" hidden>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 choose">
+        <img src="pics/foodFightTitle.png" alt="FoodFight" class="img-responsive">
+      </div>
+      <div class='col-md-12 col-sm-12 choose'>
+        <img src="pics/chooseWeapon.png" alt="Choose your Weapons:" class="img-responsive">
+      </div>
+      <!-- options for weapon will go here -->
+      <div class='col-md-12 col-sm-12 choose'>
+        <input type="radio" name="weaponChoice" class="weaponBtn" value="knife"> Knife</input>
+        <input type="radio" name="weaponChoice" class="weaponBtn" value="meatTenderizer"> Meat Tenderizer</input>
+        <input type="radio" name="weaponChoice" class="weaponBtn" value="chineseTakeout"> Chinese Takeout</input>
+        <input type="radio" name="weaponChoice" class="weaponBtn" value="fryingPan"> Frying Pan</input>
+      </div>
+      <div class='col-md-12 col-sm-12 choose'>
+        <button id="weaponChosen" class = "btn btn-md btn-success">Fight!</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BATTLE ARENA- hidden until after choosey. -->
+  <section id="fight" class="fightScreen" hidden>
+    <div class='container-fluid'>
+      <div class="row">
+        <!-- Left character div -->
+        <div class="col-md-4 col-sm-4 col-xs-4">
+          <div id="heroInfo">
+          </div>
+         
+        </div> <!-- left div end -->
+
+        <!-- Attack button and log-->
+        <div class= "col-md-4 col-sm-4 col-xs-4" id="attackBtn">
+          <button id ="attackButton" class="btn btn-md btn-danger" value="PLAY"  onclick="audio.play()">ATTACK</button>
+          <!-- Battle Log goes here. -->
+          <div id="battleLog">
+          </div>
+          <div id="bonusLog">
+          </div>
+
+        </div>
+        <!-- Right character div -->
+        <div class= "col-md-4 col-sm-4 col-xs-4">
+          <div id="enemyInfo">
+          </div>
+         
+        </div> <!-- right div end -->
+      </div>
+    </div>
+
+
+  </section>
+
+  <audio id="audio" src="pics/Jab.wav" ></audio>
+  <audio id="winSound" src="pics/win.wav" ></audio>
+  <audio id="loseSound" src="pics/lose.wav" ></audio>
+  <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type = "text/javascript" src = "javascripts/weapons.js"></script>
+  <script type="text/javascript" src="javascripts/hero.js"></script>
+  <script type="text/javascript" src="javascripts/enemy.js"></script>
+  <script type="text/javascript" src="javascripts/foodfight.js"></script>
+  <script type="text/javascript" src = "javascripts/chooseplayer.js"></script>
+  <script type="text/javascript" src="javascripts/results.js"></script>
+  <script type="text/javascript" src="javascripts/bonus.js"></script>
+  <script type="text/javascript" src="sound.js"></script>
+</body>
+</html>
