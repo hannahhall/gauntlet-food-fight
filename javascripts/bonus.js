@@ -5,8 +5,7 @@ var FoodFight = (function(bonus) {
     var heroBonus = hero.bonus;
     var enemyBonus = enemy.bonus;
     var thisAttackNumber = Math.random();
-    console.log("this attack number", thisAttackNumber);
-    //fruits 
+    //fruits
     if (hero.type === "Fruit" && thisAttackNumber >= .6) {
       if (thisAttackNumber >= .6) {
         heroBonus.push({
@@ -155,7 +154,7 @@ var FoodFight = (function(bonus) {
           message: "BONUS: Too much meat can be bad for you. Bring it on, you say? +5 hero attack."
         })
       }
-      //meat enemy bonuses 
+      //meat enemy bonuses
       if (enemy.name === "Mrs. Lovett" && thisAttackNumber <= .6) {
         enemyBonus.push({
           name: "meatpie",
@@ -298,18 +297,18 @@ var FoodFight = (function(bonus) {
 
       if (thisAttackNumber >=.5) {
         heroBonus.push({
-          name: "healthy", 
-          healthPoints: 1, 
+          name: "healthy",
+          healthPoints: 1,
           message: "BONUS: Vegetables are good for you, and for themselves. +1 hero health."
-        }) 
+        })
       }else if (thisAttackNumber <=.3) {
         heroBonus.push({
-          name: "yucky", 
-          attackPoints: +1, 
+          name: "yucky",
+          attackPoints: +1,
           message: "BONUS: do you know how many children are starving in China? You're not leaving the dinner table until you finish your vegetables. +1 hero attack."
         })
       }
-      //vegetable enemy bonuses 
+      //vegetable enemy bonuses
       if (enemy.name === "Paula Dean" && thisAttackNumber >=.5) {
         heroBonus.push({
           name: "ewveggies",
@@ -323,7 +322,7 @@ var FoodFight = (function(bonus) {
           message: "BONUS: Gordon Ramsay is GREAT at chopping. -3 hero health."
         })
       } //end of enemy bonus
-      //potato weapon bonuses 
+      //potato weapon bonuses
       if (hero.species === "Potato" && thisAttackNumber <=.4) {
         if (hero.weapon.weapon === "meatTenderizer") {
           heroBonus.push({
@@ -361,14 +360,14 @@ var FoodFight = (function(bonus) {
       } else if (hero.species === "Tomato") {
         if (thisAttackNumber <=.3) {
           heroBonus.push({
-            name: 'fruit confusion', 
-            attackPoints: 2, 
+            name: 'fruit confusion',
+            attackPoints: 2,
             message: "BONUS: is the tomato a fruit or a vegetable? +2 hero attack."
           })
         } else if (thisAttackNumber >=.7) {
           heroBonus.push({
-            name: "fruit confusion 2", 
-            attackPoints: 1, 
+            name: "fruit confusion 2",
+            attackPoints: 1,
             message: "BONUS: is the tomato pronounced tomayto or tomahto? +1 hero attack."
           })
         }
@@ -381,8 +380,8 @@ var FoodFight = (function(bonus) {
           })
         } else if (enemy.species === "gordonRamsay" && thisAttackNumber >=.5) {
           heroBonus.push({
-            name: "disgruntledchefs", 
-            attackPoints: 5, 
+            name: "disgruntledchefs",
+            attackPoints: 5,
             message: "BONUS: Disgruntled chefs throw tomatoes at Gordon Ramsay. +5 hero attack."
           })
         }
@@ -419,14 +418,14 @@ var FoodFight = (function(bonus) {
 
       if (thisAttackNumber >=.7) {
         enemyBonus.push({
-          name:"yelling", 
-          attackPoints: 3, 
+          name:"yelling",
+          attackPoints: 3,
           message: "BONUS: Gordon Ramsay's yelling sometimes makes people cry. +3 enemy attack."
         })
       } else if (thisAttackNumber <=.3) {
         enemyBonus.push({
-          name: "yelling 2", 
-          attackPoints: -3, 
+          name: "yelling 2",
+          attackPoints: -3,
           message: "BONUS: Gordon Ramsay's yelling sometimes makes people do their best work. +3 hero health."
         })
       }
@@ -475,34 +474,34 @@ var FoodFight = (function(bonus) {
 
       if (thisAttackNumber >=.7) {
         enemyBonus.push({
-          name: "fat", 
-          attackPoints: 1, 
+          name: "fat",
+          attackPoints: 1,
           message: "BONUS: Paula's food is coma-inducingly delicious. +1 enemy attack."
         })
       } else if (thisAttackNumber <=.3) {
         enemyBonus.push({
-          name: "butter", 
-          healthPoints: -3, 
+          name: "butter",
+          healthPoints: -3,
           message: "Paula Dean's recipes sometimes sound suspiciously like a suicide note. -3 enemy health."
         })
       }
 
       if (enemy.weapon.weapon === "fryingPan" && thisAttackNumber >=.2) {
         enemyBonus.push({
-          name: "noface", 
-          attackPoints: -1, 
+          name: "noface",
+          attackPoints: -1,
           message: "BONUS: what is even going on, Paula Dean? Why is there a frying pan on your face? -1 enemy attack."
         })
       } else if (enemy.weapon.weapon === "knife" && thisAttackNumber <=.7) {
         enemyBonus.push({
-          name: "cleaning ears", 
-          attackPoints: 1, 
+          name: "cleaning ears",
+          attackPoints: 1,
           message: "BONUS: Paula says it's always a good idea to clean your ears with your knife before attacking, for extra germiness. +1 enemy attack."
         })
       } else if (enemy.weapon.weapon === "meatTenderizer" && thisAttackNumber >=.3) {
         enemyBonus.push({
-          name: "masher", 
-          attackPoints: -3, 
+          name: "masher",
+          attackPoints: -3,
           message: "BONUS: Paula Paula Paula. That's not a meat tenderizer, that's a potato masher. You should know better. -3 enemy attack."
         })
       }

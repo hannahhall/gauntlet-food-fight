@@ -23,9 +23,6 @@ var FoodFight = (function(choose){
       currentHero.weapon = choose.setWeapon();
       currentHero.picture = FoodFight.setPicture(currentHero);
       currentEnemy = choose.generateEnemy();
-      
-      console.log("current hero", currentHero );
-      console.log("current enemy", currentEnemy );
       FoodFight.setUpGame(currentHero, currentEnemy);
     }
 
@@ -33,7 +30,6 @@ var FoodFight = (function(choose){
 
   heroBtn.click(function() {
     selected = heroBtn.filter(":checked").val();
-    console.log(selected);
   });
 
   weaponButton.click(function() {
@@ -47,9 +43,7 @@ var FoodFight = (function(choose){
     return hero;
   };
 
-
   choose.setWeapon = function() {
-    console.log("weapon chosen", weaponChosen );
     var currentWeapon = new FoodFight.weaponOptions[weaponChosen]();
     return currentWeapon;
   }
